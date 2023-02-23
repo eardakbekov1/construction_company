@@ -1,13 +1,13 @@
-@extends('flats.layout')
+@extends('sales.layout')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Изменить данные о квартире:</h2>
+                <h2>Изменить данные о договоре купле-продажи квартиры:</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('flats.index') }}">Назад</a>
+                <a class="btn btn-primary" href="{{ route('sales.index') }}">Назад</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('flats.update',$flat->id) }}" method="POST">
+    <form action="{{ route('sales.update',$sale->id) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -31,29 +31,29 @@
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Площадь квартиры:</strong>
-                    <input type="text" name="square" value="{{ $flat->square }}" class="form-control" placeholder="Введите квадратуру квартиры">
+                    <strong>Дата подписания договора о совершении сделки купле-продажи квартиры:</strong>
+                    <input type="text" name="sale_date" value="{{ $sale->sale_date }}" class="form-control" placeholder="Введите квадратуру квартиры">
                 </div>
             </div>
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Этаж:</strong>
-                    <input type="text" name="floor" value="{{ $flat->floor }}" class="form-control" placeholder="Введите этаж">
+                    <strong>Клиент:</strong>
+                    <input type="text" name="client_id" value="{{ $sale->client_id }}" class="form-control" placeholder="Выберите клиента">
                 </div>
             </div>
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Количество комнат:</strong>
-                    <input type="text" name="number_of_rooms" value="{{ $flat->number_of_rooms }}" class="form-control" placeholder="Введите количество комнат">
+                    <strong>Квартира:</strong>
+                    <input type="text" name="flat_id" value="{{ $sale->flat_id }}" class="form-control" placeholder="Выберите квартиру">
                 </div>
             </div>
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Выберите дом:</strong>
-                    <input type="text" name="house_id" value="{{ $flat->house_id }}" class="form-control" placeholder="Введите цену за 1 квадратный метр в долларах">
+                    <input type="text" name="house_id" value="{{ $sale->house_id }}" class="form-control" placeholder="Выберите дом">
                 </div>
             </div>
             <p></p>
