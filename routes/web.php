@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HouseController;
 use App\Http\Controllers\FlatController;
+use \App\Http\Controllers\ClientController;
+use \App\Http\Controllers\SaleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +23,5 @@ Route::get('/', function () {
 
 Route::resource('houses', \App\Http\Controllers\HouseController::class);
 Route::resource('flats', \App\Http\Controllers\FlatController::class);
+Route::resource('clients', \App\Http\Controllers\ClientController::class);
+Route::resource('sales', \App\Http\Controllers\SaleController::class);
