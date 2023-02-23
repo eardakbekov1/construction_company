@@ -14,7 +14,7 @@ class HouseController extends Controller
      */
     public function index()
     {
-        $houses = house::latest()->paginate(5);
+        $houses = House::latest()->paginate(5);
 
         return view('houses.index',compact('houses'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -38,8 +38,8 @@ class HouseController extends Controller
      */
     public function store(Request $request)
     {
-        $house = house::create($request->all());
-        dd($house);
+        $house = House::create($request->all());
+
         $house->save();
 
         return redirect()->route('houses.index')
@@ -52,7 +52,7 @@ class HouseController extends Controller
      * @param  \App\Models\house  $house
      * @return \Illuminate\Http\Response
      */
-    public function show(house $house)
+    public function show(House $house)
     {
         return view('houses.show',compact('house'));
     }
@@ -63,7 +63,7 @@ class HouseController extends Controller
      * @param  \App\Models\house  $house
      * @return \Illuminate\Http\Response
      */
-    public function edit(house $house)
+    public function edit(House $house)
     {
         return view('houses.edit',compact('house'));
     }
@@ -75,12 +75,8 @@ class HouseController extends Controller
      * @param  \App\Models\house  $house
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, house $house)
+    public function update(Request $request, House $house)
     {
-        $request->validate([
-            'name' => 'required',
-        ]);
-
         $house->update($request->all());
 
         return redirect()->route('houses.index')
@@ -93,7 +89,7 @@ class HouseController extends Controller
      * @param  \App\Models\house  $house
      * @return \Illuminate\Http\Response
      */
-    public function destroy(house $house)
+    public function destroy(House $house)
     {
         $house->delete();
 

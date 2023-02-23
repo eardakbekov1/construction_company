@@ -1,13 +1,13 @@
-@extends('houses.layout')
+@extends('flats.layout')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Дом: {{ $house->name }}</h2>
+                <h2>Квартира в доме: {{ $flat->house_id }}</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('houses.index') }}">Назад</a>
+                <a class="btn btn-primary" href="{{ route('flats.index') }}">Назад</a>
             </div>
         </div>
     </div>
@@ -15,32 +15,32 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Название дома:</strong>
-                {{ $house->name }}
+                <strong>Площадь квартиры:</strong>
+                {{ $flat->square }}
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Дата завершения строительства:</strong>
-                {{ $house->completion_date }}
+                <strong>Этаж:</strong>
+                {{ $flat->floor }}
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Количество этажей:</strong>
-                {{ $house->number_of_floors }}
+                <strong>Количество комнат:</strong>
+                {{ $flat->number_of_rooms }}
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Цена:</strong>
-                {{ $house->price }}
+                <strong>Дом:</strong>
+                {{ $flat->house_id }}
             </div>
         </div>
     </div>

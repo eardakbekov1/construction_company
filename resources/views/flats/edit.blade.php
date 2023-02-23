@@ -1,13 +1,13 @@
-@extends('houses.layout')
+@extends('flats.layout')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Изменить дом: {{ $house->name }}</h2>
+                <h2>Изменить данные о квартире: {{ $flat->name }}</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('houses.index') }}">Назад</a>
+                <a class="btn btn-primary" href="{{ route('flats.index') }}">Назад</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('houses.update',$house->id) }}" method="POST">
+    <form action="{{ route('flats.update',$flat->id) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -31,29 +31,29 @@
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Название дома:</strong>
-                    <input type="text" name="name" value="{{ $house->name }}" class="form-control" placeholder="Введите название дома">
+                    <strong>Площадь квартиры:</strong>
+                    <input type="text" name="square" value="{{ $flat->square }}" class="form-control" placeholder="Введите квадратуру квартиры">
                 </div>
             </div>
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Дата завершения строительства:</strong>
-                    <input type="text" name="completion_date" value="{{ $house->completion_date }}" class="form-control" placeholder="Введите дату завершения строительства">
+                    <strong>Этаж:</strong>
+                    <input type="text" name="floor" value="{{ $flat->floor }}" class="form-control" placeholder="Введите этаж">
                 </div>
             </div>
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Количество этажей:</strong>
-                    <input type="text" name="number_of_floors" value="{{ $house->number_of_floors }}" class="form-control" placeholder="Введите количество этажей">
+                    <strong>Количество комнат:</strong>
+                    <input type="text" name="number_of_rooms" value="{{ $flat->number_of_rooms }}" class="form-control" placeholder="Введите количество комнат">
                 </div>
             </div>
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Цена за квадратный метр в долларах:</strong>
-                    <input type="text" name="price" value="{{ $house->price }}" class="form-control" placeholder="Введите цену за 1 квадратный метр в долларах">
+                    <strong>Выберите дом:</strong>
+                    <input type="text" name="house_id" value="{{ $flat->house_id }}" class="form-control" placeholder="Введите цену за 1 квадратный метр в долларах">
                 </div>
             </div>
             <p></p>
