@@ -13,6 +13,7 @@
 <body>
 
 <div class="container">
+    <a href="http://127.0.0.1:8000/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="lara_logo" height="100" width="100"></a>
     @yield('content')
 </div>
 

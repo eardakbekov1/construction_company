@@ -34,7 +34,7 @@
                 <td>{{ $flat->square }}</td>
                 <td>{{ $flat->floor }}</td>
                 <td>{{ $flat->number_of_rooms }}</td>
-                <td>{{ $flat->house_id }}</td>
+                <td>{{ $flat->house->name }}</td>
                 <td>
                     <form action="{{ route('flats.destroy',$flat->id) }}" method="POST">
 

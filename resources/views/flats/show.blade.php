@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Квартира в доме: {{ $flat->house_id }}</h2>
+                <h2>Квартира в доме: {{ $flat->house->name }}</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('flats.index') }}">Назад</a>

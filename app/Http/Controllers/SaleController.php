@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
+use App\Models\Flat;
+use App\Models\House;
 use App\Models\Sale;
 use Illuminate\Http\Request;
 
@@ -15,8 +18,11 @@ class SaleController extends Controller
     public function index()
     {
         $sales = Sale::latest()->paginate(5);
+        $houses = House::all();
+        $flats = Flat::all();
+        $clients = Client::all();
 
-        return view('sales.index',compact('sales'))
+        return view('sales.index',compact('sales', 'houses', 'flats', 'clients'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 

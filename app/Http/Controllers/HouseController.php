@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Flat;
 use App\Models\House;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HouseController extends Controller
 {
@@ -54,7 +56,19 @@ class HouseController extends Controller
      */
     public function show(House $house)
     {
-        return view('houses.show',compact('house'));
+        $house_id = $house->id;
+
+        $sql = "SELECT s.id sales_id, s.sale_date sales_sale_date, c.name client_name, f.square flat_square, h.name house_name
+                FROM sales s
+                left join clients c on s.client_id = c.id
+                left join flats f on s.flat_id = f.id
+                left join houses h on s.house_id = h.id
+                where h.id = ". DB::connection()->getPdo()->quote($house_id);
+
+        $sales = DB::select(DB::raw($sql));
+
+        return view('houses.show',compact('house', 'sales'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -65,7 +79,7 @@ class HouseController extends Controller
      */
     public function edit(House $house)
     {
-        return view('houses.edit',compact('house'));
+        return view('houses.edit', compact('house'));
     }
 
     /**

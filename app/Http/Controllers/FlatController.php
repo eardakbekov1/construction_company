@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Flat;
+use App\Models\House;
 use Illuminate\Http\Request;
 
 class FlatController extends Controller
@@ -15,8 +16,9 @@ class FlatController extends Controller
     public function index()
     {
         $flats = Flat::latest()->paginate(5);
+        $houses = House::all();
 
-        return view('flats.index',compact('flats'))
+        return view('flats.index',compact('flats', 'houses'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
