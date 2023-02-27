@@ -24,7 +24,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Клиент:</strong>
-                {{ $sale->client_id }}
+                {{ $sale->client->name }}
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Квартира:</strong>
-                {{ $sale->flat_id }}
+                {{ $sale->flat->flat_number }}
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Дом:</strong>
-                {{ $sale->house_id }}
+                {{ $sale->house->name }}
             </div>
         </div>
     </div>

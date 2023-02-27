@@ -22,6 +22,7 @@
     <table class="table table-bordered">
         <tr>
             <th>№</th>
+            <th>Номер квартиры</th>
             <th>Площадь квартиры</th>
             <th>Этаж</th>
             <th>Количество комнат</th>
@@ -31,6 +32,7 @@
         @foreach ($flats as $flat)
             <tr>
                 <td>{{ ++$i }}</td>
+                <td>{{ $flat->flat_number }}</td>
                 <td>{{ $flat->square }}</td>
                 <td>{{ $flat->floor }}</td>
                 <td>{{ $flat->number_of_rooms }}</td>

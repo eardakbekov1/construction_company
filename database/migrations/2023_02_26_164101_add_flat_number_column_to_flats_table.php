@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddNumberColumnToFlatsTable extends Migration
+class AddFlatNumberColumnToFlatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddNumberColumnToFlatsTable extends Migration
     public function up()
     {
         Schema::table('flats', function (Blueprint $table) {
-            //
+            $table->integer('flat_number')->after('id');
         });
     }
 

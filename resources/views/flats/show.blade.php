@@ -15,6 +15,14 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Номер квартиры:</strong>
+                {{ $flat->flat_number }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Площадь квартиры:</strong>
                 {{ $flat->square }}
             </div>

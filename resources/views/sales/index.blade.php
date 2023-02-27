@@ -24,7 +24,7 @@
             <th>№</th>
             <th>Дата подписания договора</th>
             <th>Клиент</th>
-            <th>Площадь</th>
+            <th>Номер квартиры</th>
             <th>Дом</th>
             <th>Управление</th>
         </tr>
@@ -33,7 +33,7 @@
                 <td>{{ ++$i }}</td>
                 <td>{{ $sale->sale_date }}</td>
                 <td>{{ $sale->client->name }}</td>
-                <td>{{ $sale->flat->square }}</td>
+                <td>{{ $sale->flat->flat_number }}</td>
                 <td>{{ $sale->house->name }}</td>
                 <td>
                     <form action="{{ route('sales.destroy',$sale->id) }}" method="POST">

@@ -30,6 +30,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
+                    <strong>Номер квартиры:</strong>
+                    <input type="text" name="flat_number" class="form-control" placeholder="Введите номер квартиры">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <p></p>
                     <strong>Площадь квартиры:</strong>
                     <input type="text" name="square" class="form-control" placeholder="Введите квадратуру квартиры">
                 </div>
@@ -52,7 +59,11 @@
                 <div class="form-group">
                     <p></p>
                     <strong>Дом:</strong>
-                    <input type="text" name="house_id" class="form-control" placeholder="Выберите в каком доме будет спланирована квартира">
+                        <select class="form-select"  name="house_id" aria-label="Default select example">
+                            @foreach($houses as $house)
+                                <option value="{{$house->id}}">{{$house->name}}</option>
+                            @endforeach
+                        </select>
                 </div>
             </div>
             <p></p>

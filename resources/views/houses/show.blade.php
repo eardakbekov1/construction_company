@@ -55,17 +55,17 @@
         <tr>
             <th>№</th>
             <th>Дата подписания договора</th>
-            <th>Клиент</th>
-            <th>Площадь</th>
+            <th>Покупатель</th>
+            <th>Номер квартиры</th>
             <th>Дом</th>
             <th>Управление</th>
         </tr>
         @foreach ($sales as $sale)
             <tr>
                 <td>{{ ++$i }}</td>
-                <td>{{ $sale->sales_sale_date }}</td>
+                <td>{{ $sale->sale_date }}</td>
                 <td>{{ $sale->client_name }}</td>
-                <td>{{ $sale->flat_square }}</td>
+                <td>{{ $sale->flat_number }}</td>
                 <td>{{ $sale->house_name }}</td>
                 <td>
                     <form action="{{ route('sales.destroy',$sale->sales_id) }}" method="POST">

@@ -33,7 +33,11 @@ class SaleController extends Controller
      */
     public function create()
     {
-        return view('sales.create');
+        $houses = House::all();
+        $flats = Flat::all();
+        $clients = Client::all();
+
+        return view('sales.create', compact('houses', 'flats', 'clients'));
     }
 
     /**
@@ -58,9 +62,9 @@ class SaleController extends Controller
      * @param  \App\Models\sale  $sale
      * @return \Illuminate\Http\Response
      */
-    public function show(Sale $sale)
+    public function show(Sale $sale, House $house, Flat $flat, Client $client)
     {
-        return view('sales.show',compact('sale'));
+        return view('sales.show',compact('sale', 'house', 'flat', 'client'));
     }
 
     /**
@@ -71,7 +75,11 @@ class SaleController extends Controller
      */
     public function edit(Sale $sale)
     {
-        return view('sales.edit',compact('sale'));
+        $houses = House::all();
+        $flats = Flat::all();
+        $clients = Client::all();
+
+        return view('sales.edit',compact('sale', 'houses', 'flats', 'clients'));
     }
 
     /**

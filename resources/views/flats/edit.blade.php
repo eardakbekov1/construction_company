@@ -31,6 +31,13 @@
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Номер квартиры:</strong>
+                    <input type="text" name="flat_number" value="{{ $flat->flat_number }}" class="form-control" placeholder="Введите номер квартиры">
+                </div>
+            </div>
+            <p></p>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Площадь квартиры:</strong>
                     <input type="text" name="square" value="{{ $flat->square }}" class="form-control" placeholder="Введите квадратуру квартиры">
                 </div>
@@ -53,7 +60,11 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Выберите дом:</strong>
-                    <input type="text" name="house_id" value="{{ $flat->house_id }}" class="form-control" placeholder="Введите цену за 1 квадратный метр в долларах">
+                    <select class="form-select"  name="house_id" aria-label="Default select example">
+                        @foreach($houses as $house)
+                            <option value="{{$house->id}}">{{$house->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <p></p>

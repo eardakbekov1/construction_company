@@ -29,7 +29,10 @@ class FlatController extends Controller
      */
     public function create()
     {
-        return view('flats.create');
+        $flats = Flat::all();
+        $houses = House::all();
+
+        return view('flats.create', compact('flats', 'houses'));
     }
 
     /**
@@ -67,7 +70,9 @@ class FlatController extends Controller
      */
     public function edit(Flat $flat)
     {
-        return view('flats.edit',compact('flat'));
+        $houses = House::all();
+
+        return view('flats.edit',compact('flat', 'houses'));
     }
 
     /**

@@ -58,7 +58,7 @@ class HouseController extends Controller
     {
         $house_id = $house->id;
 
-        $sql = "SELECT s.id sales_id, s.sale_date sales_sale_date, c.name client_name, f.square flat_square, h.name house_name
+        $sql = "SELECT s.id sales_id, s.sale_date sale_date, c.name client_name, f.flat_number flat_number, h.name house_name
                 FROM sales s
                 left join clients c on s.client_id = c.id
                 left join flats f on s.flat_id = f.id

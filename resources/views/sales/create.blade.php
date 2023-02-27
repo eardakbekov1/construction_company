@@ -38,21 +38,33 @@
                 <div class="form-group">
                     <p></p>
                     <strong>Клиент:</strong>
-                    <input type="text" name="client_id" class="form-control" placeholder="Выберите клиента">
+                    <select class="form-select"  name="house_id" aria-label="Default select example">
+                        @foreach($clients as $client)
+                            <option value="{{$client->id}}">{{$client->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
                     <strong>Квартира:</strong>
-                    <input type="text" name="flat_id" class="form-control" placeholder="Выберите квартиру">
+                    <select class="form-select"  name="house_id" aria-label="Default select example">
+                        @foreach($flats as $flat)
+                            <option value="{{$flat->id}}">{{$flat->flat_number}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
                     <strong>Дом:</strong>
-                    <input type="text" name="house_id" class="form-control" placeholder="Выберите дом">
+                    <select class="form-select"  name="house_id" aria-label="Default select example">
+                        @foreach($houses as $house)
+                            <option value="{{$house->id}}">{{$house->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <p></p>
