@@ -25,34 +25,48 @@
 
     <form action="{{ route('houses.store') }}" method="POST">
         @csrf
-
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Название дома:</strong>
-                    <input type="text" name="name" class="form-control" placeholder="Введите название дома">
+                    <label for="houseNameStoreFormControl">Название дома:</label>
+                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{old('name')}}" required id="houseNameStoreFormControl" placeholder="Введите название дома">
+                    @error('name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Дата завершения строительства:</strong>
+                    <label for="">Дата завершения строительства:</label>
                     <input type="text" name="completion_date" class="form-control" placeholder="Введите дату завершения строительства в формате 2023-02-23">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Количество этажей:</strong>
-                    <input type="text" name="number_of_floors" class="form-control" placeholder="Количество этажей">
+                    <label for="houseNumberOfFloorsStoreFormControl">Количество этажей:</label>
+                    <input name="number_of_floors" type="number" class="form-control @error('number_of_floors') is-invalid @enderror" value="{{old('number_of_floors')}}" required id="houseNumberOfFloorsStoreFormControl" placeholder="Количество этажей">
+                    @error('number_of_floors')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Цена:</strong>
-                    <input type="text" name="price" class="form-control" placeholder="Введите цена за 1 кв. метр в долларах">
+                    <label for="housePriceStoreFormControl">Цена:</label>
+                    <input name="price" type="number" class="form-control @error('price') is-invalid @enderror" value="{{old('price')}}" required id="housePriceStoreFormControl" placeholder="Введите цена за 1 кв. метр в долларах">
+                    @error('price')
+                    <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
             </div>
             <p></p>
