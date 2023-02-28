@@ -44,7 +44,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Дата завершения строительства:</strong>
-                    <input type="text" name="completion_date" value="{{ $house->completion_date }}" class="form-control" placeholder="Введите дату завершения строительства">
+                    <input type="date" name="completion_date" value="{{ $house->completion_date }}" class="form-control" placeholder="Введите дату завершения строительства">
                 </div>
             </div>
             <p></p>

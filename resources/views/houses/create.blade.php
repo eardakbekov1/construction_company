@@ -42,7 +42,7 @@
                 <div class="form-group">
                     <p></p>
                     <label for="houseCompletionDateStoreFormControl">Дата завершения строительства:</label>
-                    <input type="text" name="completion_date" class="form-control" id="houseCompletionDateStoreFormControl" placeholder="Введите дату завершения строительства в формате 2023-02-23">
+                    <input type="date" name="completion_date" class="form-control" id="houseCompletionDateStoreFormControl" placeholder="Введите дату завершения строительства в формате 2023-02-23">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

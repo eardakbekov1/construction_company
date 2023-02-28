@@ -31,7 +31,7 @@
                 <div class="form-group">
                     <p></p>
                     <strong>Дата подписания договора о купле-продаже квартиры:</strong>
-                    <input type="text" name="sale_date" class="form-control" placeholder="Введите дату в формате 2023-02-23">
+                    <input type="date" name="sale_date" class="form-control" placeholder="Введите дату в формате 2023-02-23">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

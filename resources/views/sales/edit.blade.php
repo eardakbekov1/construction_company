@@ -32,7 +32,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Дата подписания договора о совершении сделки купле-продажи квартиры:</strong>
-                    <input type="text" name="sale_date" value="{{ $sale->sale_date }}" class="form-control" placeholder="Введите квадратуру квартиры">
+                    <input type="date" name="sale_date" value="{{ $sale->sale_date }}" class="form-control" placeholder="Введите квадратуру квартиры">
                 </div>
             </div>
             <p></p>
