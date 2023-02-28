@@ -31,8 +31,13 @@
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Название дома:</strong>
-                    <input type="text" name="name" value="{{ $house->name }}" class="form-control" placeholder="Введите название дома">
+                    <label for="houseNameUpdateFormControl">Название дома:</label>
+                    <input type="text" name="name" value="{{ $house->name }}" class="form-control @error('name') is-invalid @enderror" value="{{old('name')}}" required id="houseNameUpdateFormControl" placeholder="Введите название дома">
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
             </div>
             <p></p>
@@ -45,15 +50,25 @@
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Количество этажей:</strong>
-                    <input type="text" name="number_of_floors" value="{{ $house->number_of_floors }}" class="form-control" placeholder="Введите количество этажей">
+                    <label for="houseNumberOfFloorsUpdateFormControl">Количество этажей:</label>
+                    <input type="text" name="number_of_floors" value="{{ $house->number_of_floors }}" class="form-control @error('number_of_floors') is-invalid @enderror" value="{{old('number_of_floors')}}" required id="houseNumberOfFloorsUpdateFormControl" placeholder="Введите количество этажей">
+                    @error('number_of_floors')
+                    <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
             </div>
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Цена за квадратный метр в долларах:</strong>
-                    <input type="text" name="price" value="{{ $house->price }}" class="form-control" placeholder="Введите цену за 1 квадратный метр в долларах">
+                    <label for="housePriceUpdateFormControl">Цена за квадратный метр в долларах:</label>
+                    <input type="text" name="price" value="{{ $house->price }}" class="form-control  @error('price') is-invalid @enderror" value="{{old('price')}}" required id="housePriceUpdateFormControl" placeholder="Введите цену за 1 квадратный метр в долларах">
+                    @error('price')
+                    <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
             </div>
             <p></p>
