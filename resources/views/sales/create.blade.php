@@ -30,15 +30,15 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Дата подписания договора о купле-продаже квартиры:</strong>
-                    <input type="date" name="sale_date" class="form-control" placeholder="Введите дату в формате 2023-02-23">
+                    <label for="saleSaleDateStoreFormControl">Дата подписания договора о купле-продаже квартиры:</label>
+                    <input id="saleSaleDateStoreFormControl" type="date" name="sale_date" class="form-control" placeholder="Выберите дату подписания договора">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Клиент:</strong>
-                    <select class="form-select"  name="house_id" aria-label="Default select example">
+                    <label for="saleClientIdStoreFormControl">Клиент:</label>
+                    <select id="saleClientIdStoreFormControl" class="form-select"  name="client_id" aria-label="Default select example">
                         @foreach($clients as $client)
                             <option value="{{$client->id}}">{{$client->name}}</option>
                         @endforeach
@@ -48,8 +48,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Квартира:</strong>
-                    <select class="form-select"  name="house_id" aria-label="Default select example">
+                    <label for="saleFlatIdStoreFormControl">Квартира:</label>
+                    <select id="saleFlatIdStoreFormControl" class="form-select"  name="flat_id" aria-label="Default select example">
                         @foreach($flats as $flat)
                             <option value="{{$flat->id}}">{{$flat->flat_number}}</option>
                         @endforeach
@@ -59,8 +59,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Дом:</strong>
-                    <select class="form-select"  name="house_id" aria-label="Default select example">
+                    <label for="saleHouseIdStoreFormControl">Дом:</label>
+                    <select id="saleHouseIdStoreFormControl" class="form-select"  name="house_id" aria-label="Default select example">
                         @foreach($houses as $house)
                             <option value="{{$house->id}}">{{$house->name}}</option>
                         @endforeach

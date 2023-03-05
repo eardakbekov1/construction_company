@@ -46,7 +46,7 @@ class SaleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(HouseStoreRequest $request)
+    public function store(Request $request)
     {
         $sale = Sale::create($request->all());
 

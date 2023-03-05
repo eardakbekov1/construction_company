@@ -31,22 +31,22 @@
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>ФИО клиента:</strong>
-                    <input type="text" name="name" value="{{ $client->name }}" class="form-control" placeholder="Введите ФИО клиента">
+                    <label for="clientNameUpdateFormControl">ФИО клиента:</label>
+                    <input id="clientNameUpdateFormControl" type="text" name="name" value="{{ $client->name }}" class="form-control" placeholder="Введите ФИО клиента">
                 </div>
             </div>
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Номер телефона клиента:</strong>
-                    <input type="text" name="phone_number" value="{{ $client->phone_number }}" class="form-control" placeholder="Введите номер телефона клиента">
+                    <label for="clientPhoneNumberUpdateFormControl">Номер телефона клиента:</label>
+                    <input id="clientPhoneNumberUpdateFormControl" type="text" name="phone_number" value="{{ $client->phone_number }}" class="form-control" placeholder="Введите номер телефона клиента">
                 </div>
             </div>
             <p></p>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Email:</strong>
-                    <input type="text" name="email" value="{{ $client->email }}" class="form-control" placeholder="Введите email клиента">
+                    <label for="clientEmailUpdateFormControl">Email:</label>
+                    <input id="clientEmailUpdateFormControl" type="text" name="email" value="{{ $client->email }}" class="form-control" placeholder="Введите email клиента">
                 </div>
             </div>
             <p></p>

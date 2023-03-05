@@ -30,36 +30,36 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Номер квартиры:</strong>
-                    <input type="text" name="flat_number" class="form-control" placeholder="Введите номер квартиры">
+                    <label for="flatFlatNumberStoreFormControl">Номер квартиры:</label>
+                    <input id="flatFlatNumberStoreFormControl" type="text" name="flat_number" class="form-control" placeholder="Введите номер квартиры">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Площадь квартиры:</strong>
-                    <input type="text" name="square" class="form-control" placeholder="Введите квадратуру квартиры">
+                    <label for="flatSquareStoreFormControl">Площадь квартиры:</label>
+                    <input for="flatSquareStoreFormControl" type="text" name="square" class="form-control" placeholder="Введите квадратуру квартиры">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Этаж:</strong>
-                    <input type="text" name="floor" class="form-control" placeholder="Введите этаж">
+                    <label for="flatFloorStoreFormControl">Этаж:</label>
+                    <input id="flatFloorStoreFormControl" type="text" name="floor" class="form-control" placeholder="Введите этаж">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Количество комнат:</strong>
-                    <input type="text" name="number_of_rooms" class="form-control" placeholder="Введите количество комнат">
+                    <label for="flatNumberOfRoomsStoreFormControl">Количество комнат:</label>
+                    <input id="flatNumberOfRoomsStoreFormControl" type="text" name="number_of_rooms" class="form-control" placeholder="Введите количество комнат">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Дом:</strong>
-                        <select class="form-select"  name="house_id" aria-label="Default select example">
+                    <label for="flatHouseIdStoreFormControl">Дом:</label>
+                        <select for="flatHouseIdStoreFormControl" class="form-select"  name="house_id" aria-label="Default select example">
                             @foreach($houses as $house)
                                 <option value="{{$house->id}}">{{$house->name}}</option>
                             @endforeach
@@ -71,6 +71,5 @@
                 <button type="submit" class="btn btn-primary">Сохранить</button>
             </div>
         </div>
-
     </form>
 @endsection

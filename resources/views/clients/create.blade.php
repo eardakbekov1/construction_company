@@ -30,23 +30,23 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>ФИО клиента:</strong>
-                    <input type="text" name="name" class="form-control" placeholder="Введите ФИО клиента">
+                    <label for="clientNameStoreFormControl">ФИО клиента:</label>
+                    <input id="clientNameStoreFormControl" type="text" name="name" class="form-control" placeholder="Введите ФИО клиента">
 
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Номер телефона клиента:</strong>
-                    <input type="text" name="phone_number" class="form-control" placeholder="Введите номер телефона клиента">
+                    <label for="clientPhoneNumberStoreFormControl">Номер телефона клиента:</label>
+                    <input id="clientPhoneNumberStoreFormControl" type="text" name="phone_number" class="form-control" placeholder="Введите номер телефона клиента">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <p></p>
-                    <strong>Email:</strong>
-                    <input type="text" name="email" class="form-control" placeholder="Введите email клиента">
+                    <label for="clientEmailStoreFormControl">Email:</label>
+                    <input id="clientEmailStoreFormControl" type="text" name="email" class="form-control" placeholder="Введите email клиента">
                 </div>
             </div>
             <p></p>
